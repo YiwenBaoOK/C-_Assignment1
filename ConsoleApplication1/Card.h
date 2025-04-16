@@ -9,7 +9,6 @@ enum class CardType {
     Cannon, Chest, Key, Anchor, Sword, Hook, Oracle, Map, Mermaid, Kraken
 };
 
-typedef std::vector<class Card*> CardCollection;
 
 class Card {
 protected:
@@ -35,3 +34,5 @@ public:
     // Returns a string representation of card type and value
     virtual std::string str() const = 0;
 };
+
+typedef std::vector<Card*> CardCollection;
