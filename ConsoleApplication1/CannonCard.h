@@ -2,9 +2,15 @@
 #include "Card.h"
 class CannonCard : public Card {
 public:
-    CannonCard(int v);
-    void present() const override;
+    CannonCard(int value) : Card(CardType::Cannon, value) {}
+
     void play(Game& game, Player& player) override;
-    std::string str() const override;
+    void present() const override {
+        std::cout << "Cannon(" << value << ")" << std::endl;
+    }
+    std::string str() const override {
+        return "Cannon(" + std::to_string(value) + ")";
+    }
 };
+
 

@@ -1,5 +1,5 @@
 #include <vector>
-#include "Card.h"
+
 
 class Player {
 private:
@@ -24,4 +24,5 @@ public:
     void printBank() const;
 
     const CardCollection& getBank() const; // To access the player's bank
+    CardCollection& getBank();             // Modifiable access
 };

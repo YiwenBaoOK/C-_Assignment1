@@ -47,7 +47,7 @@ void Player::removeFromBank(Card* card) {
     }
 }
 
-// Print out the cards in the player's bank
+// For Reading the bank safely
 void Player::printBank() const {
     std::cout << _name << "'s bank:" << std::endl;
     for (const Card* c : bank) {
@@ -59,6 +59,12 @@ void Player::printBank() const {
 const CardCollection& Player::getBank() const {
     return bank;
 }
+
+// Allows modfiying the bank
+CardCollection& Player::getBank() {
+    return bank;
+}
+
 
 // Play a card into the play area (from deck to player)
 bool Player::playCard(Card* card, Game& game) {
