@@ -1,8 +1,16 @@
 #include "Card.h"
 
-const CardType& Card::type()
-{
-    
+Card::Card(CardType t, int v) : cardtype(t), value(v) {}
+Card::~Card() {}
+
+int Card::getValue() const {
+    return value;
 }
 
-// play the effect of this card virtual void play(Game &game, Player &player) = 0;
+CardType Card::getType() const {
+    return cardtype;
+}
+
+const CardType& Card::type() const {
+    return cardtype;  // Returns a reference to the card's type
+}

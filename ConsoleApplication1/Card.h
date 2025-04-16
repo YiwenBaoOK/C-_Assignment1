@@ -1,29 +1,37 @@
-#pragma once
-#include <string>
+#include <iostream>
 #include <vector>
+#include <string>
+
+class Game;
+class Player;
+
 enum class CardType {
-    Cannon, Chest, Key, Sword, Hook, Oracle, Map, Mermaid, Kraken
-};
-    class Card {
-    protected:
-        int value;
-        CardType type;
-    public:
-        Card(CardType t, int v) : type(t), value(v) {}
-        virtual ~Card() {}
-
-        int getValue() const { return value; }
-        CardType getType() const { return type; }
-
-        //Function to return the card type.
-        const CardType& type();
-
-        //Function to return the type of card and value as a string.
-        virtual std::string str() const;
-
-        virtual void present() const;
-
-        virtual void willAddToBank(Game& game, Player& player) {};
-        typedef std::vector<Card*> CardCollection;
+    Cannon, Chest, Key, Anchor, Sword, Hook, Oracle, Map, Mermaid, Kraken
 };
 
+typedef std::vector<class Card*> CardCollection;
+
+class Card {
+protected:
+    int value;
+    CardType cardtype;
+public:
+    Card(CardType t, int v);
+    virtual ~Card();
+
+    int getValue() const;
+    CardType getType() const;
+    const CardType& type() const;
+
+    // Presents card type to screen
+    virtual void present() const = 0;
+
+    // Play the effect of this card
+    virtual void play(Game& game, Player& player) = 0;
+
+    // Optional: Called before being added to bank
+    virtual void willAddToBank(Game& game, Player& player) {}
+
+    // Returns a string representation of card type and value
+    virtual std::string str() const = 0;
+};
