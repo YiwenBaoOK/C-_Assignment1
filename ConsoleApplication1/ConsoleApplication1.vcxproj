@@ -127,13 +127,31 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CannonCard.cpp" />
     <ClCompile Include="Card.cpp" />
+    <ClCompile Include="ChestCard.cpp" />
     <ClCompile Include="ConsoleApplication1.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="HookCard.cpp" />
+    <ClCompile Include="KeyCard.cpp" />
+    <ClCompile Include="KrakenCard.cpp" />
+    <ClCompile Include="MapCard.cpp" />
+    <ClCompile Include="MermaidCard.cpp" />
+    <ClCompile Include="OracleCard.cpp" />
+    <ClCompile Include="SwordCard.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CannonCard.h" />
     <ClInclude Include="Card.h" />
+    <ClInclude Include="ChestCard.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="HookCard.h" />
+    <ClInclude Include="KeyCard.h" />
+    <ClInclude Include="KrakenCard.h" />
+    <ClInclude Include="MapCard.h" />
+    <ClInclude Include="MermaidCard.h" />
+    <ClInclude Include="OracleCard.h" />
+    <ClInclude Include="SwordCard.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

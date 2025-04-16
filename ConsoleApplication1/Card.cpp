@@ -2,5 +2,7 @@
 
 const CardType& Card::type()
 {
-    // TODO: insert return statement here
+    
 }
+
+// play the effect of this card virtual void play(Game &game, Player &player) = 0;
