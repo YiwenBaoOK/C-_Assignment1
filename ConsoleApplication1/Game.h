@@ -2,7 +2,6 @@
 #include <stack>
 #include <memory>
 #include <random>
-#include "Card.h"
 #include "Player.h"
 
 #define GAME_TITLE \
@@ -62,4 +61,7 @@ public:
 
     //Determine if the game is over.
     bool isGameOver() const;
+
+    Card* drawFromDiscard();  // Returns the top card from the discard pile
+
 };

@@ -25,3 +25,5 @@ void CannonCard::play(Game& game, Player& player) {
         std::cout << "Cannon effect: Discarded " << highestCard->str()
             << " from " << opponent.getName() << "'s bank." << std::endl;
     }
+
+}

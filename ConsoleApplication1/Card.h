@@ -9,6 +9,7 @@ enum class CardType {
     Cannon, Chest, Key, Anchor, Sword, Hook, Oracle, Map, Mermaid, Kraken
 };
 
+typedef std::vector<Card*> CardCollection;
 
 class Card {
 protected:
@@ -29,10 +30,9 @@ public:
     virtual void play(Game& game, Player& player) = 0;
 
     // Optional: Called before being added to bank
-    virtual void willAddToBank(Game& game, Player& player) {}
+    virtual void willAddToBank(Game& game, Player& player) {};
 
     // Returns a string representation of card type and value
     virtual std::string str() const = 0;
 };
 
-typedef std::vector<Card*> CardCollection;

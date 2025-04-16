@@ -1,5 +1,5 @@
 #include <vector>
-
+#include "Card.h"
 
 class Player {
 private:
@@ -23,6 +23,9 @@ public:
     void removeFromBank(Card* card);
     void printBank() const;
 
-    const CardCollection& getBank() const; // To access the player's bank
-    CardCollection& getBank();             // Modifiable access
+    const CardCollection& getPlayArea() const;// To access the player's PlayArea
+    const CardCollection& getBank() const; // To access the player's bank safely without editing
+    CardCollection& getBank();             // To access and modify the player's bank safely without editing
+
+
 };
