@@ -1,4 +1,6 @@
 #pragma once
+#include <string>
+#include <vector>
 enum class CardType {
     Cannon, Chest, Key, Sword, Hook, Oracle, Map, Mermaid, Kraken
 };
@@ -12,6 +14,16 @@ enum class CardType {
 
         int getValue() const { return value; }
         CardType getType() const { return type; }
-        virtual void present() const = 0;
+
+        //Function to return the card type.
+        const CardType& type();
+
+        //Function to return the type of card and value as a string.
+        virtual std::string str() const;
+
+        virtual void present() const;
+
+        virtual void willAddToBank(Game& game, Player& player) {};
+        typedef std::vector<Card*> CardCollection;
 };
 
