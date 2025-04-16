@@ -138,6 +138,7 @@
     <ClCompile Include="MapCard.cpp" />
     <ClCompile Include="MermaidCard.cpp" />
     <ClCompile Include="OracleCard.cpp" />
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="SwordCard.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -151,6 +152,7 @@
     <ClInclude Include="MapCard.h" />
     <ClInclude Include="MermaidCard.h" />
     <ClInclude Include="OracleCard.h" />
+    <ClInclude Include="Player.h" />
     <ClInclude Include="SwordCard.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
