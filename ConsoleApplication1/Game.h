@@ -20,35 +20,51 @@
 
 class Game {
 private:
-    std::vector<std::unique_ptr<Player>> players;
-    std::stack<Card*> deck;
-    CardCollection discardPile;
-    int currentTurn;
-    int round;
-    int currentPlayerIndex;
-    const int maxTurns = 20;
+    // Game state variables
+    std::vector<std::unique_ptr<Player>> players;     // Players in the game
+    std::stack<Card*> deck;                          // Deck of cards
+    CardCollection discardPile;                      // Discard pile for busted cards
+    int currentTurn;                                 // Current turn number
+    int round;                                       // Current round number
+    int currentPlayerIndex;                          // Index of the active player
+    const int maxTurns = 20;                         // Maximum number of turns before game ends
 
 public:
-    Game();
-    ~Game();
+    // Constructor and destructor
+    Game();                                         // Initialize game state
+    ~Game();                                        // Clean up resources
 
-    //Is responsible for initialising and starting a new game.
-    void startGame();
+    // Game flow methods
+    void startGame();                               // Initialize and start a new game
+    void endGame();                                 // End game and display final scores
+    void takeTurn();                                // Handle a single player's turn
+    bool isGameOver() const;                        // Check if game should end
 
-    //Is responsible for ending a game and printing final scores.
-    void endGame();
+    // Deck management methods
+    void createDeck();                              // Create a new deck with 54 cards
+    void shuffleDeck();                             // Shuffle the deck randomly
+    Card* drawCard();                               // Draw top card from deck
+    Card* peekDeck();                               // Look at top card without removing
+    void discardCard(Card* card);                   // Add card to discard pile
+    Card* drawFromDiscard();                        // Draw top card from discard pile
 
-    //Is responsible for creating the card deck.
-    void createDeck();
+    // Card manipulation methods
+    void drawCardForPlayer(Player& player);         // Draw card for specific player
 
-    //Is responsible for shuffling the deck.
-    void shuffleDeck();
+    // Player management methods
+    Player& getCurrentPlayer();                     // Get reference to current player
+    Player& getOpponent(Player& current);           // Get reference to opponent player
 
-    //Is responsible for controlling a turn in the game.
-    void takeTurn();
+    // Game state access methods
+    int getCurrentTurn() const;                     // Get current turn number
+    int getRound() const;                           // Get current round number
 
-    Card* drawCard();
-    void discardCard(Card* card);
+    // Helper methods for game logic
+    bool checkForBust(const Player& player);         // Check if player has duplicate card types
+
+    void bankCards(Player& player);                  // Move cards from play area to bank
+
+    int calculateFinalScore(const Player& player);   // Calculate final score based on highest card of each suit
 
     //Is responsible for initialising players.
     Player& getCurrentPlayer();
@@ -59,15 +75,4 @@ public:
 
     //Getting the current round of the game.
     int getRound() const;
-
-    //Determine if the game is over.
-    bool isGameOver() const;
-
-    Card* drawFromDiscard();  // Returns the top card from the discard pile
-
-    Card* peekDeck();//Peeks the top card from the deck
-
-    void drawCardForPlayer(Player& player);// The player can choose whether to draw card or not.
-
-
 };
