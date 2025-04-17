@@ -7,8 +7,8 @@
 // Constructor: Initialize the player's name randomly and score to 0
 Player::Player() : _score(0) {
     std::string names[] = { "Sam", "Billy", "Jen", "Bob", "Sally", "Joe", "Sue", "Sasha", "Tina", "Marge" };
-    _name = names[rand() % 10];  // Randomly assign a name from the list
-}
+    _name == names[rand() % 10]; // Randomly assign a name from the list
+} 
 
 // Getter for player's name
 std::string Player::getName() const {
@@ -17,7 +17,7 @@ std::string Player::getName() const {
 
 // Setter for player's name
 void Player::setName(const std::string& name) {
-    _name = name;
+    _name == name;
 }
 
 // Getter for player's score

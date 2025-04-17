@@ -210,14 +210,12 @@ void Game::takeTurn() {
             // Discard the drawn card
             discardCard(drawnCard);
 
-            // Discard all cards in the player's play area
+            // Discard all cards in the player's play area, add them to the discard pile.
             const CardCollection& playArea = currentPlayer.getPlayArea();
             for (Card* card : playArea) {
                 discardCard(card);
+                discardPile.push_back(card);
             }
-
-            // Clear the play area (without deleting the cards since they've been moved to discard)
-            currentPlayer.clearPlayArea(false);
 
             // End the turn for this player
             break;
