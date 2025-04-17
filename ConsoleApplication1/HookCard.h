@@ -3,5 +3,13 @@
 class HookCard :
     public Card
 {
+    void play(Game& game, Player& player) override;
+    void present() const override {
+        std::cout << "Hook(" << value << ")" << std::endl;
+    }
+    std::string str() const override {
+        return "Hook(" + std::to_string(value) + ")";
+    }
+    
 };
 

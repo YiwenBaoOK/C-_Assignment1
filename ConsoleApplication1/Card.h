@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include <vector>
 #include <string>
@@ -9,7 +10,6 @@ enum class CardType {
     Cannon, Chest, Key, Anchor, Sword, Hook, Oracle, Map, Mermaid, Kraken
 };
 
-typedef std::vector<Card*> CardCollection;
 
 class Card {
 protected:
@@ -34,5 +34,8 @@ public:
 
     // Returns a string representation of card type and value
     virtual std::string str() const = 0;
+
+    void shuffleDeck();
 };
 
+typedef std::vector<Card*> CardCollection;

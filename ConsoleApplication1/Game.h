@@ -1,3 +1,4 @@
+#pragma once
 #include <vector>
 #include <stack>
 #include <memory>
@@ -63,5 +64,10 @@ public:
     bool isGameOver() const;
 
     Card* drawFromDiscard();  // Returns the top card from the discard pile
+
+    Card* peekDeck();//Peeks the top card from the deck
+
+    void drawCardForPlayer(Player& player);// The player can choose whether to draw card or not.
+
 
 };
