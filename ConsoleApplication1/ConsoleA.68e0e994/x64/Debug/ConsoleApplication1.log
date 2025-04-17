@@ -1,10 +1,4 @@
 ﻿  Card.cpp
-C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\Card.cpp(15,23): error C2039: 'type': is not a member of 'Card'
-      C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\Card.h(18,7):
-      see declaration of 'Card'
-  
-C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\Card.cpp(15,23): error C2270: 'type': modifiers not allowed on nonmember functions
-C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\Card.cpp(16,12): error C2065: 'cardtype': undeclared identifier
   ChestCard.cpp
   Game.cpp
 C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\Game.cpp(220,27): error C2039: 'clearPlayArea': is not a member of 'Player'
@@ -20,7 +14,5 @@ C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\Game.cpp(330,30): e
       No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
   
   HookCard.cpp
-  OracleCard.cpp
-  Player.cpp
   SwordCard.cpp
   Generating Code...

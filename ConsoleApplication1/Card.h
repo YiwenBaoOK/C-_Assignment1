@@ -25,7 +25,21 @@ public:
     virtual ~Card();
 
     int getValue() const;
+    bool isSameType(const Card& other) const;
     CardType getType() const;
+
+    /**
+    * Checks if this card's value is higher than another card of the same type
+    * @param other The card to compare with
+    * @return true if this card has higher value and same type, false otherwise
+    */
+    bool isHigherValueThan(const Card& other) const;
+
+    /**
+    * Validates if the card's value is within the acceptable range for its type
+    * @return true if the card has a valid value, false otherwise
+    */
+    bool isValidValue() const;
 
     // Presents card info to screen
     virtual void present() const = 0;
