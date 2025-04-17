@@ -1,18 +1,26 @@
-﻿  Game.cpp
-C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\Game.cpp(172,19): warning C4244: 'initializing': conversion from '_Rep' to 'unsigned int', possible loss of data
-C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\Game.cpp(172,19): warning C4244:         with
-C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\Game.cpp(172,19): warning C4244:         [
-C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\Game.cpp(172,19): warning C4244:             _Rep=std::chrono::system_clock::rep
-C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\Game.cpp(172,19): warning C4244:         ]
+﻿  Card.cpp
+C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\Card.cpp(15,23): error C2039: 'type': is not a member of 'Card'
+      C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\Card.h(18,7):
+      see declaration of 'Card'
+  
+C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\Card.cpp(15,23): error C2270: 'type': modifiers not allowed on nonmember functions
+C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\Card.cpp(16,12): error C2065: 'cardtype': undeclared identifier
+  ChestCard.cpp
+  Game.cpp
+C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\Game.cpp(220,27): error C2039: 'clearPlayArea': is not a member of 'Player'
+      C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\Player.h(6,7):
+      see declaration of 'Player'
+  
+C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\Game.cpp(315,12): error C2039: 'clearPlayArea': is not a member of 'Player'
+      C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\Player.h(6,7):
+      see declaration of 'Player'
+  
+C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\Game.cpp(330,30): error C2440: 'initializing': cannot convert from 'CardType' to 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+      C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\Game.cpp(330,30):
+      No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+  
   HookCard.cpp
-  KrakenCard.cpp
+  OracleCard.cpp
+  Player.cpp
   SwordCard.cpp
   Generating Code...
-  LINK : C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\x64\Debug\ConsoleApplication1.exe not found or not built by the last incremental link; performing full link
-ChestCard.obj : error LNK2019: unresolved external symbol "public: class std::vector<class Card *,class std::allocator<class Card *> > const & __cdecl Player::getPlayArea(void)const " (?getPlayArea@Player@@QEBAAEBV?$vector@PEAVCard@@V?$allocator@PEAVCard@@@std@@@std@@XZ) referenced in function "public: virtual void __cdecl ChestCard::willAddToBank(class Game &,class Player &)" (?willAddToBank@ChestCard@@UEAAXAEAVGame@@AEAVPlayer@@@Z)
-Game.obj : error LNK2001: unresolved external symbol "public: class std::vector<class Card *,class std::allocator<class Card *> > const & __cdecl Player::getPlayArea(void)const " (?getPlayArea@Player@@QEBAAEBV?$vector@PEAVCard@@V?$allocator@PEAVCard@@@std@@@std@@XZ)
-OracleCard.obj : error LNK2001: unresolved external symbol "public: class std::vector<class Card *,class std::allocator<class Card *> > const & __cdecl Player::getPlayArea(void)const " (?getPlayArea@Player@@QEBAAEBV?$vector@PEAVCard@@V?$allocator@PEAVCard@@@std@@@std@@XZ)
-Game.obj : error LNK2001: unresolved external symbol "public: virtual void __cdecl MermaidCard::play(class Game &,class Player &)" (?play@MermaidCard@@UEAAXAEAVGame@@AEAVPlayer@@@Z)
-HookCard.obj : error LNK2019: unresolved external symbol "public: class std::vector<class Card *,class std::allocator<class Card *> > & __cdecl Player::accessBank(void)" (?accessBank@Player@@QEAAAEAV?$vector@PEAVCard@@V?$allocator@PEAVCard@@@std@@@std@@XZ) referenced in function "public: virtual void __cdecl HookCard::play(class Game &,class Player &)" (?play@HookCard@@UEAAXAEAVGame@@AEAVPlayer@@@Z)
-SwordCard.obj : error LNK2001: unresolved external symbol "public: class std::vector<class Card *,class std::allocator<class Card *> > & __cdecl Player::accessBank(void)" (?accessBank@Player@@QEAAAEAV?$vector@PEAVCard@@V?$allocator@PEAVCard@@@std@@@std@@XZ)
-C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\x64\Debug\ConsoleApplication1.exe : fatal error LNK1120: 3 unresolved externals

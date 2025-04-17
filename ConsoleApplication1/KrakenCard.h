@@ -2,12 +2,10 @@
 #include "Card.h"
 class KrakenCard :
     public Card
-{public:
+{
+    public:
     KrakenCard(int value) : Card(CardType::Kraken, value) {}
-    void play(Game& game, Player& player) override {
-        //Kraken card doesn't have any ability but worths more points.
-        std::cout << " No effect but Mermaids are worth more." << std::endl;
-    }
+    void play(Game& game, Player& player) override;
     void present() const override {
         std::cout << "Kraken(" << value << ")" << std::endl;
     }

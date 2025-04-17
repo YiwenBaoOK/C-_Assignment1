@@ -13,6 +13,7 @@
 #include <random>
 #include <chrono>
 #include <string>
+#include <map>
 
 Game::Game() : currentTurn(0), round(1), currentPlayerIndex(0) {
     // Initialize an empty game
@@ -37,7 +38,7 @@ Game::~Game() {
 
 void Game::startGame() {
     std::cout << GAME_TITLE << std::endl;
-    std::cout << "Welcome to Dread Draw!" << std::endl;
+    std::cout << "Starting Dead Man's Draw++!" << std::endl;
 
     // Create two players with randomly generated names
     players.clear();
@@ -80,7 +81,7 @@ void Game::endGame() {
     std::cout << "\n======= Game Over =======\n" << std::endl;
     std::cout << "Final Scores:" << std::endl;
 
-    int maxScore = -1;
+    int winnerScore = -1;
     int winnerIndex = -1;
 
     for (size_t i = 0; i < players.size(); ++i) {
@@ -89,8 +90,8 @@ void Game::endGame() {
 
         std::cout << player->getName() << ": " << playerScore << " points" << std::endl;
 
-        if (playerScore > maxScore) {
-            maxScore = playerScore;
+        if (playerScore > winnerScore) {
+            winnerScore = playerScore;
             winnerIndex = static_cast<int>(i);
         }
     }
@@ -102,7 +103,7 @@ void Game::endGame() {
         std::cout << "\nIt's a tie!" << std::endl;
     }
 
-    std::cout << "\nThanks for playing Dread Draw!" << std::endl;
+    std::cout << "\nThanks for playing Dead Man's Draw++!" << std::endl;
 }
 
 void Game::createDeck() {
@@ -143,7 +144,7 @@ void Game::createDeck() {
 
     // Create Map cards
     for (int value = 2; value <= 7; ++value) {
-        deck.push(new OracleCard(value));
+        deck.push(new MapCard(value));
     }
 
     // Create Mermaid cards
@@ -155,28 +156,15 @@ void Game::createDeck() {
     for (int value = 2; value <= 7; ++value) {
         deck.push(new KrakenCard(value));
     }
- 
-    // Note: Add other card types once their constructors are properly implemented
-    // For example: HookCard, MapCard, KrakenCard, etc.
+  
 }
-
-void Game::shuffleDeck() {
     // Convert the stack to a vector for shuffling
-    std::vector<Card*> tempDeck;
-    while (!deck.empty()) {
-        tempDeck.push_back(deck.top());
-        deck.pop();
+    void shuffleDeck(CardCollection & cards) {
+        CardCollection shuffleDeck{ cards.begin(), cards.end() };
+        std::shuffle(shuffleDeck.begin(), shuffleDeck.end(), std::mt19937{ std::random_device{}() });
+        std::copy(shuffleDeck.begin(), shuffleDeck.end(), cards.begin());
     }
 
-    // Use a random device for true randomness
-    unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
-    std::shuffle(tempDeck.begin(), tempDeck.end(), std::default_random_engine(seed));
-
-    // Put the cards back in the stack
-    for (Card* card : tempDeck) {
-        deck.push(card);
-    }
-}
 
 void Game::takeTurn() {
     Player& currentPlayer = getCurrentPlayer();
@@ -197,6 +185,7 @@ void Game::takeTurn() {
 
         if (!drawnCard) {
             std::cout << "No more cards available!" << std::endl;
+            
             break;
         }
 
@@ -220,6 +209,15 @@ void Game::takeTurn() {
 
             // Discard the drawn card
             discardCard(drawnCard);
+
+            // Discard all cards in the player's play area
+            const CardCollection& playArea = currentPlayer.getPlayArea();
+            for (Card* card : playArea) {
+                discardCard(card);
+            }
+
+            // Clear the play area (without deleting the cards since they've been moved to discard)
+            currentPlayer.clearPlayArea(false);
 
             // End the turn for this player
             break;
@@ -297,6 +295,54 @@ int Game::getCurrentTurn() const {
 
 int Game::getRound() const {
     return round;
+}
+
+bool Game::checkForBust(const Player& player)
+{
+    return false;
+}
+
+void Game::bankCards(Player& player)
+{
+    const CardCollection& playArea = player.getPlayArea();
+
+    // Move all cards from play area to bank
+    for (Card* card : playArea) {
+        player.addToBank(card);
+    }
+
+    // Clear the play area (without deleting the cards)
+    player.clearPlayArea(false);
+
+    std::cout << player.getName() << " banked their cards." << std::endl;
+}
+
+int Game::calculateFinalScore(const Player& player)
+{
+    int score = 0;
+    const CardCollection& bank = player.getBank();
+
+    // Track the highest value card of each type
+    std::map<std::string, int> highestValueByType;
+
+    // Find the highest value for each card type
+    for (const Card* card : bank) {
+        std::string cardType = card->getType();
+        int cardValue = card->getValue();
+
+        // Update if this is the highest value card of this type
+        if (highestValueByType.find(cardType) == highestValueByType.end() ||
+            cardValue > highestValueByType[cardType]) {
+            highestValueByType[cardType] = cardValue;
+        }
+    }
+
+    // Sum up the highest value for each card type
+    for (const auto& pair : highestValueByType) {
+        score += pair.second;
+    }
+
+    return score;
 }
 
 bool Game::isGameOver() const {

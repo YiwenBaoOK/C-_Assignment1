@@ -1,13 +1,14 @@
 #pragma once
 #include "Card.h"
-class MapCard :
-    public Card
-{
+class MapCard : public Card {
+public:
+    MapCard(int value) : Card(CardType::Cannon, value) {}
+
+    void play(Game& game, Player& player) override;
     void present() const override {
-        std::cout << "Map(" << value << ")" << std::endl;
+        std::cout << "Cannon(" << value << ")" << std::endl;
     }
     std::string str() const override {
-        return "Map(" + std::to_string(value) + ")";
+        return "Cannon(" + std::to_string(value) + ")";
     }
 };
-

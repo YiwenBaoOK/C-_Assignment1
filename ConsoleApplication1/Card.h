@@ -10,32 +10,47 @@ enum class CardType {
     Cannon, Chest, Key, Anchor, Sword, Hook, Oracle, Map, Mermaid, Kraken
 };
 
+/**
+ * The Base Card class representing a playing card in the game.
+ * This is an abstract class that defines the interface for all card types.
+ */
 
 class Card {
 protected:
     int value;
     CardType cardtype;
 public:
+    //Constructor and Destructor for the card.
     Card(CardType t, int v);
     virtual ~Card();
 
     int getValue() const;
     CardType getType() const;
-    const CardType& type() const;
 
-    // Presents card type to screen
+    // Presents card info to screen
     virtual void present() const = 0;
 
-    // Play the effect of this card
+    /**
+     * Executes the special ability of this card when played
+     * @param game Reference to the game instance
+     * @param player Reference to the player who played the card
+     */
     virtual void play(Game& game, Player& player) = 0;
 
-    // Optional: Called before being added to bank
+    /**
+    * Called before a card is added to a player's bank
+    * Allows cards to perform special actions when banked
+    * @param game Reference to the game instance
+    * @param player Reference to the player who is banking the card
+    */
     virtual void willAddToBank(Game& game, Player& player) {};
 
-    // Returns a string representation of card type and value
+    /**
+         * Returns a string representation of the card
+         * @return A string describing the card type and value
+         */
     virtual std::string str() const = 0;
 
-    void shuffleDeck();
 };
 
 typedef std::vector<Card*> CardCollection;
