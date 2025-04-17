@@ -68,6 +68,10 @@ CardCollection& Player::getBank() {
 
 // Play a card into the play area (from deck to player)
 bool Player::playCard(Card* card, Game& game) {
+
+    std::cout << _name << " draws a " << card->str() << std::endl;
+
+
     // For now, simply add the card to the play area
     playArea.push_back(card);
 

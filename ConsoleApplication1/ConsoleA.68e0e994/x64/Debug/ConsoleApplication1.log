@@ -1,49 +1,11 @@
-﻿  CannonCard.cpp
-C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\Player.h(2,10): error C1014: too many include files: depth = 1024
-  (compiling source file 'CannonCard.cpp')
-  
-  Card.cpp
-C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\Card.h(4,10): error C1014: too many include files: depth = 1024
-  (compiling source file 'Card.cpp')
-  
-  ChestCard.cpp
-C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\Player.h(2,10): error C1014: too many include files: depth = 1024
-  (compiling source file 'ChestCard.cpp')
-  
-  Game.cpp
-C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\Game.h(5,10): error C1014: too many include files: depth = 1024
-  (compiling source file 'Game.cpp')
-  
-  HookCard.cpp
-C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\Player.h(2,10): error C1014: too many include files: depth = 1024
-  (compiling source file 'HookCard.cpp')
-  
-  KeyCard.cpp
-C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\Player.h(2,10): error C1014: too many include files: depth = 1024
-  (compiling source file 'KeyCard.cpp')
-  
-  KrakenCard.cpp
-C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\Player.h(2,10): error C1014: too many include files: depth = 1024
-  (compiling source file 'KrakenCard.cpp')
-  
-  MapCard.cpp
-C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\Player.h(2,10): error C1014: too many include files: depth = 1024
-  (compiling source file 'MapCard.cpp')
-  
-  MermaidCard.cpp
-C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\Player.h(2,10): error C1014: too many include files: depth = 1024
-  (compiling source file 'MermaidCard.cpp')
-  
-  OracleCard.cpp
-C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\Player.h(2,10): error C1014: too many include files: depth = 1024
-  (compiling source file 'OracleCard.cpp')
-  
-  Player.cpp
-C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\Player.h(2,10): error C1014: too many include files: depth = 1024
-  (compiling source file 'Player.cpp')
-  
-  SwordCard.cpp
-C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\Player.h(2,10): error C1014: too many include files: depth = 1024
-  (compiling source file 'SwordCard.cpp')
-  
-  Generating Code...
+﻿CannonCard.obj : error LNK2019: unresolved external symbol "public: void __cdecl Game::discardCard(class Card *)" (?discardCard@Game@@QEAAXPEAVCard@@@Z) referenced in function "public: virtual void __cdecl CannonCard::play(class Game &,class Player &)" (?play@CannonCard@@UEAAXAEAVGame@@AEAVPlayer@@@Z)
+CannonCard.obj : error LNK2019: unresolved external symbol "public: class Player & __cdecl Game::getOpponent(class Player &)" (?getOpponent@Game@@QEAAAEAVPlayer@@AEAV2@@Z) referenced in function "public: virtual void __cdecl CannonCard::play(class Game &,class Player &)" (?play@CannonCard@@UEAAXAEAVGame@@AEAVPlayer@@@Z)
+SwordCard.obj : error LNK2001: unresolved external symbol "public: class Player & __cdecl Game::getOpponent(class Player &)" (?getOpponent@Game@@QEAAAEAVPlayer@@AEAV2@@Z)
+ChestCard.obj : error LNK2019: unresolved external symbol "public: class std::vector<class Card *,class std::allocator<class Card *> > const & __cdecl Player::getPlayArea(void)const " (?getPlayArea@Player@@QEBAAEBV?$vector@PEAVCard@@V?$allocator@PEAVCard@@@std@@@std@@XZ) referenced in function "public: virtual void __cdecl ChestCard::willAddToBank(class Game &,class Player &)" (?willAddToBank@ChestCard@@UEAAXAEAVGame@@AEAVPlayer@@@Z)
+OracleCard.obj : error LNK2001: unresolved external symbol "public: class std::vector<class Card *,class std::allocator<class Card *> > const & __cdecl Player::getPlayArea(void)const " (?getPlayArea@Player@@QEBAAEBV?$vector@PEAVCard@@V?$allocator@PEAVCard@@@std@@@std@@XZ)
+ChestCard.obj : error LNK2019: unresolved external symbol "public: class Card * __cdecl Game::drawFromDiscard(void)" (?drawFromDiscard@Game@@QEAAPEAVCard@@XZ) referenced in function "public: virtual void __cdecl ChestCard::willAddToBank(class Game &,class Player &)" (?willAddToBank@ChestCard@@UEAAXAEAVGame@@AEAVPlayer@@@Z)
+HookCard.obj : error LNK2019: unresolved external symbol "public: class std::vector<class Card *,class std::allocator<class Card *> > & __cdecl Player::accessBank(void)" (?accessBank@Player@@QEAAAEAV?$vector@PEAVCard@@V?$allocator@PEAVCard@@@std@@@std@@XZ) referenced in function "private: virtual void __cdecl HookCard::play(class Game &,class Player &)" (?play@HookCard@@EEAAXAEAVGame@@AEAVPlayer@@@Z)
+SwordCard.obj : error LNK2001: unresolved external symbol "public: class std::vector<class Card *,class std::allocator<class Card *> > & __cdecl Player::accessBank(void)" (?accessBank@Player@@QEAAAEAV?$vector@PEAVCard@@V?$allocator@PEAVCard@@@std@@@std@@XZ)
+OracleCard.obj : error LNK2019: unresolved external symbol "public: class Card * __cdecl Game::peekDeck(void)" (?peekDeck@Game@@QEAAPEAVCard@@XZ) referenced in function "public: virtual void __cdecl OracleCard::play(class Game &,class Player &)" (?play@OracleCard@@UEAAXAEAVGame@@AEAVPlayer@@@Z)
+OracleCard.obj : error LNK2019: unresolved external symbol "public: void __cdecl Game::drawCardForPlayer(class Player &)" (?drawCardForPlayer@Game@@QEAAXAEAVPlayer@@@Z) referenced in function "public: virtual void __cdecl OracleCard::play(class Game &,class Player &)" (?play@OracleCard@@UEAAXAEAVGame@@AEAVPlayer@@@Z)
+C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\x64\Debug\ConsoleApplication1.exe : fatal error LNK1120: 7 unresolved externals

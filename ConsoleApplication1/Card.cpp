@@ -1,4 +1,5 @@
 #include "Card.h"
+#include <random>
 
 Card::Card(CardType t, int v) : cardtype(t), value(v) {}
 Card::~Card() {}
@@ -13,4 +14,10 @@ CardType Card::getType() const {
 
 const CardType& Card::type() const {
     return cardtype;  // Returns a reference to the card's type
+}
+
+void shuffleDeck(CardCollection& cards) {
+    CardCollection shuffleDeck{ cards.begin(), cards.end() }; 
+    std::shuffle(shuffleDeck.begin(), shuffleDeck.end(), std::mt19937{ std::random_device{}() }); 
+    std::copy(shuffleDeck.begin(), shuffleDeck.end(), cards.begin()); 
 }

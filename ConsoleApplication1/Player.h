@@ -1,4 +1,6 @@
+#pragma once
 #include <vector>
+#include <string>
 #include "Card.h"
 
 class Player {
@@ -23,9 +25,10 @@ public:
     void removeFromBank(Card* card);
     void printBank() const;
 
-    const CardCollection& getPlayArea() const;// To access the player's PlayArea
-    const CardCollection& getBank() const; // To access the player's bank safely without editing
-    CardCollection& getBank();             // To access and modify the player's bank safely without editing
 
+    const CardCollection& getPlayArea() const;// To access the player's PlayArea
+    const CardCollection &getBank() const; // To access the player's bank safely without editing
+    CardCollection& getBank();             // To access and modify the player's bank safely without editing
+    CardCollection& accessBank();
 
 };
