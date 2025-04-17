@@ -66,13 +66,4 @@ public:
 
     int calculateFinalScore(const Player& player);   // Calculate final score based on highest card of each suit
 
-    //Is responsible for initialising players.
-    Player& getCurrentPlayer();
-    Player& getOpponent(Player& current);
-
-    //Getting the current turn of the game.
-    int getCurrentTurn() const;
-
-    //Getting the current round of the game.
-    int getRound() const;
 };
