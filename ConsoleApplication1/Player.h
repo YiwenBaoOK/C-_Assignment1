@@ -22,6 +22,7 @@ public:
 
     // Methods to manage cards in the play area and bank
     bool playCard(Card* card, Game& game);
+    void clearPlayArea(bool shouldDelete);
     void addToBank(Card* card);
     void removeFromBank(Card* card);
     void printBank() const;
@@ -32,5 +33,5 @@ public:
     CardCollection& getBank();             // To access and modify the player's bank safely without editing
     CardCollection& accessBank();
 
-    bool clearPlayArea = false;
+    void clearPlayArea();
 };

@@ -1,18 +1,4 @@
-﻿  CannonCard.cpp
-  ChestCard.cpp
-  Game.cpp
-C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\Game.cpp(313,11): error C2064: term does not evaluate to a function taking 1 arguments
-C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\Game.cpp(328,30): error C2440: 'initializing': cannot convert from 'CardType' to 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
-      C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\Game.cpp(328,30):
-      No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-  
-  HookCard.cpp
-  KeyCard.cpp
-  KrakenCard.cpp
-  MapCard.cpp
-  OracleCard.cpp
-  Player.cpp
-C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\Player.cpp(10,11): warning C4834: discarding return value of function with [[nodiscard]] attribute
-C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\Player.cpp(20,11): warning C4834: discarding return value of function with [[nodiscard]] attribute
-  SwordCard.cpp
-  Generating Code...
+﻿  Player.cpp
+C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\Player.cpp(12,11): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\Player.cpp(24,11): warning C4834: discarding return value of function with [[nodiscard]] attribute
+  ConsoleApplication1.vcxproj -> C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\x64\Debug\ConsoleApplication1.exe

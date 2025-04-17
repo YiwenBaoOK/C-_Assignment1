@@ -4,11 +4,15 @@
 #include <iostream>
 #include <algorithm>
 
+const std::string Player::_name = "";
+
 // Constructor: Initialize the player's name randomly and score to 0
 Player::Player() : _score(0) {
     std::string names[] = { "Sam", "Billy", "Jen", "Bob", "Sally", "Joe", "Sue", "Sasha", "Tina", "Marge" };
     _name == names[rand() % 10]; // Randomly assign a name from the list
 } 
+
+
 
 // Getter for player's name
 std::string Player::getName() const {
@@ -65,6 +69,15 @@ CardCollection& Player::getBank() {
     return bank;
 }
 
+CardCollection& Player::accessBank()
+{
+    return bank;// TODO: insert return statement here
+}
+
+void Player::clearPlayArea()
+{
+}
+
 
 // Play a card into the play area (from deck to player)
 bool Player::playCard(Card* card, Game& game) {
@@ -86,4 +99,20 @@ bool Player::playCard(Card* card, Game& game) {
         }
     }
     return false;  // No bust
+}
+
+const CardCollection& Player::getPlayArea() const {
+    return playArea;
+}
+
+// Method to clear the play area
+void Player::clearPlayArea(bool shouldDelete) {
+    if (shouldDelete) {
+        // Delete all cards in the play area
+        for (Card* card : playArea) {
+            delete card;
+        }
+    }
+    // Clear the play area vector
+    playArea.clear();
 }

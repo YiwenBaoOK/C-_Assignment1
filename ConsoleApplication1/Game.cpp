@@ -37,6 +37,7 @@ Game::~Game() {
 }
 
 void Game::startGame() {
+    
     std::cout << GAME_TITLE << std::endl;
     std::cout << "Starting Dead Man's Draw++!" << std::endl;
 
@@ -54,8 +55,8 @@ void Game::startGame() {
     discardPile.clear();
 
     // Create and shuffle the deck
-    createDeck();
-    shuffleDeck();
+    std::vector<Card*> deck = createDeck();
+    shuffleDeck(deck);
 
     std::cout << "\nGame started! " << players[0]->getName() << " vs " << players[1]->getName() << "\n" << std::endl;
 
@@ -106,65 +107,61 @@ void Game::endGame() {
     std::cout << "\nThanks for playing Dead Man's Draw++!" << std::endl;
 }
 
-void Game::createDeck() {
-    // Clear any existing deck
-    while (!deck.empty()) {
-        deck.pop();
-    }
-
+std::vector<Card*> Game::createDeck() {
+    std::vector<Card*> newDeck;
     // Create Cannon cards
     for (int value = 2; value <= 7; ++value) {
-        deck.push(new CannonCard(value));
+        newDeck.push_back(new CannonCard(value));
     }
 
     // Create Chest cards
     for (int value = 2; value <= 7; ++value) {
-        deck.push(new ChestCard(value));
+        newDeck.push_back(new ChestCard(value));
     }
 
     // Create Key cards
     for (int value = 2; value <= 7; ++value) {
-        deck.push(new KeyCard(value));
+        newDeck.push_back(new KeyCard(value));
     }
 
     // Create Sword cards
     for (int value =2; value <= 7; ++value) {
-        deck.push(new SwordCard(value));
+        newDeck.push_back(new SwordCard(value));
     }
 
     //Create Hook Cards
     for (int value = 2; value <= 7; ++value) {
-        deck.push(new HookCard(value));
+        newDeck.push_back(new HookCard(value));
     }
 
     // Create Oracle cards
     for (int value = 2; value <= 7; ++value) {
-        deck.push(new OracleCard(value));
+        newDeck.push_back(new OracleCard(value));
     }
 
     // Create Map cards
     for (int value = 2; value <= 7; ++value) {
-        deck.push(new MapCard(value));
+        newDeck.push_back(new MapCard(value));
     }
 
     // Create Mermaid cards
     for (int value = 4; value <= 9; ++value) {
-        deck.push(new MermaidCard(value));
+        newDeck.push_back(new MermaidCard(value));
     }
 
     // Create Kraken cards
     for (int value = 2; value <= 7; ++value) {
-        deck.push(new KrakenCard(value));
+        newDeck.push_back(new KrakenCard(value));
     }
-  
+    return newDeck;
+}  
+// Convert the stack to a vector for shuffling
+void Game::shuffleDeck(CardCollection& cards)
+{
+    CardCollection shuffleDeck{ cards.begin(), cards.end() };
+    std::shuffle(shuffleDeck.begin(), shuffleDeck.end(), std::mt19937{ std::random_device{}() });
+    std::copy(shuffleDeck.begin(), shuffleDeck.end(), cards.begin());
 }
-    // Convert the stack to a vector for shuffling
-    void shuffleDeck(CardCollection & cards) {
-        CardCollection shuffleDeck{ cards.begin(), cards.end() };
-        std::shuffle(shuffleDeck.begin(), shuffleDeck.end(), std::mt19937{ std::random_device{}() });
-        std::copy(shuffleDeck.begin(), shuffleDeck.end(), cards.begin());
-    }
-
 
 void Game::takeTurn() {
     Player& currentPlayer = getCurrentPlayer();
@@ -253,7 +250,7 @@ Card* Game::drawCard() {
                 deck.push(card);
             }
             discardPile.clear();
-            shuffleDeck();
+            shuffleDeck(discardPile);
         }
         else {
             // If both deck and discard pile are empty, return nullptr
@@ -321,11 +318,11 @@ int Game::calculateFinalScore(const Player& player)
     const CardCollection& bank = player.getBank();
 
     // Track the highest value card of each type
-    std::map<std::string, int> highestValueByType;
+    std::map<CardType, int> highestValueByType;
 
     // Find the highest value for each card type
     for (const Card* card : bank) {
-        std::string cardType = card->getType();
+        CardType cardType = card->getType();
         int cardValue = card->getValue();
 
         // Update if this is the highest value card of this type

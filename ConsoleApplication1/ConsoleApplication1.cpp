@@ -2,10 +2,13 @@
 //
 
 #include <iostream>
+#include "Game.h"
 
 int main()
 {
-
+    Game game;
+    game.startGame();
+    return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

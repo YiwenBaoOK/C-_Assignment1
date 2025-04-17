@@ -41,8 +41,8 @@ public:
     bool isGameOver() const;                        // Check if game should end
 
     // Deck management methods
-    void createDeck();                              // Create a new deck with 54 cards
-    void shuffleDeck();                             // Shuffle the deck randomly
+    std::vector<Card*> createDeck();                              // Create a new deck with 54 cards
+    void shuffleDeck(CardCollection& cards);        // Shuffle the deck randomly
     Card* drawCard();                               // Draw top card from deck
     Card* peekDeck();                               // Look at top card without removing
     void discardCard(Card* card);                   // Add card to discard pile
