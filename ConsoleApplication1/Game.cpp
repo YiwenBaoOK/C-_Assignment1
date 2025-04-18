@@ -186,9 +186,6 @@ void Game::takeTurn() {
     // Display player name and their Bank
     currentPlayer.printBank();
 
-    //// Display player point from their Bank
-    displayCurrentPlayerScore();
-
     bool continueTurn = true;
 
     while (continueTurn) {
@@ -244,8 +241,8 @@ void Game::takeTurn() {
                 // Bank the cards in the play area
                 bankCards(currentPlayer);
                                 
-            //// Display player point from their Bank
-            displayCurrentPlayerScore();
+                //// Display player point from their Bank
+                displayCurrentPlayerScore();
             }
         }
     }
@@ -334,13 +331,9 @@ void Game::displayCurrentPlayerScore() {
     Player& currentPlayer = getCurrentPlayer();
     int score = calculateFinalScore(currentPlayer);
 
-<<<<<<< HEAD
+    std::cout<< currentPlayer.getName() << "'s bank: " << std::endl;
     currentPlayer.printBank();
-=======
-    std::cout << "\n=== Current Score ===\n";
-    std::cout << currentPlayer.getName() << "'s score: " << score << " points" << std::endl;
-    std::cout << "===================" << std::endl;
->>>>>>> origin/main
+    std::cout << "score: " << score << " points" << std::endl;
 }
 
 

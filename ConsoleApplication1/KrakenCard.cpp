@@ -28,7 +28,7 @@ void KrakenCard::play(Game& game, Player& player) {
             break;
         }
         else {
-            std::cout << drawnCard << std::endl;
+            std::cout << drawnCard->str() << std::endl;
         }
     }
 }
