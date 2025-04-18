@@ -14,8 +14,22 @@ void KrakenCard::play(Game& game, Player& player) {
 
         bool busted = player.playCard(drawnCard, game);
         if (busted) {
-            // Bust logic is handled inside playCard
+            // Handle bust directly here
+            std::cout << "BUST! " << player.getName() << " loses all cards in play area." << std::endl;
+
+            // Discard all cards in play area
+            const CardCollection& playArea = player.getPlayArea();
+            for (Card* card : playArea) {
+                game.discardCard(card);
+            }
+
+            // Clear the play area
+            player.clearPlayArea(false);
             break;
+        }
+        else {
+            std::cout << drawnCard << std::endl;
         }
     }
 }
+// No bust occurred during Kraken's ability

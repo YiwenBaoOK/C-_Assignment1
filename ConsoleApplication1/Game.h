@@ -64,6 +64,8 @@ public:
 
     void bankCards(Player& player);                  // Move cards from play area to bank
 
+    void displayCurrentPlayerScore();               // Display current player's score on the console
+
     int calculateFinalScore(const Player& player);   // Calculate final score based on highest card of each suit
 
 };
