@@ -188,6 +188,9 @@ void Game::takeTurn() {
     std::cout << "Bank: ";
     currentPlayer.printBank();
 
+    //// Display player point from their Bank
+    displayCurrentPlayerScore();
+
     bool continueTurn = true;
 
     while (continueTurn) {
@@ -247,11 +250,19 @@ Card* Game::drawCard() {
         // If the deck is empty, reshuffle the discard pile
         if (!discardPile.empty()) {
             std::cout << "Reshuffling the discard pile..." << std::endl;
-            for (Card* card : discardPile) {
-                deck.push(card);
-            }
+
+            // Create a temporary vector for shuffling
+            std::vector<Card*> tempDeck(discardPile.begin(), discardPile.end());
             discardPile.clear();
-            shuffleDeck(discardPile);
+
+            // Shuffle the temporary deck
+            std::shuffle(tempDeck.begin(), tempDeck.end(), std::mt19937{ std::random_device{}() });
+
+            // Push cards back into the deck
+            for (Card* card : tempDeck) {
+                discardPile.clear();
+                shuffleDeck(discardPile);
+            }
         }
         else {
             // If both deck and discard pile are empty, return nullptr
@@ -312,6 +323,16 @@ void Game::bankCards(Player& player)
 
     std::cout << player.getName() << " banked their cards." << std::endl;
 }
+
+void Game::displayCurrentPlayerScore() {
+    Player& currentPlayer = getCurrentPlayer();
+    int score = calculateFinalScore(currentPlayer);
+
+    std::cout << "\n=== Current Score ===\n";
+    std::cout << currentPlayer.getName() << "'s score: " << score << " points" << std::endl;
+    std::cout << "===================" << std::endl;
+}
+
 
 int Game::calculateFinalScore(const Player& player)
 {
