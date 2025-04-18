@@ -6,7 +6,7 @@
 class Game;
 class Player {
 private:
-    static const std::string _name;
+    std::string _name;
     int _score;
     CardCollection playArea;  // Cards in the play area
     CardCollection bank;      // Cards in the player's bank

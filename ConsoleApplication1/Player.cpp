@@ -4,12 +4,16 @@
 #include <iostream>
 #include <algorithm>
 
-const std::string Player::_name = "";
-
 // Constructor: Initialize the player's name randomly and score to 0
 Player::Player() : _score(0) {
+        // Seed the random number generator
+        static bool seeded = false;
+        if (!seeded) {
+            srand(static_cast<unsigned int>(time(nullptr)));
+            seeded = true;
+        }
     std::string names[] = { "Sam", "Billy", "Jen", "Bob", "Sally", "Joe", "Sue", "Sasha", "Tina", "Marge" };
-    _name == names[rand() % 10]; // Randomly assign a name from the list
+    _name = names[rand() % 10]; // Randomly assign a name from the list
 } 
 
 
@@ -21,7 +25,7 @@ std::string Player::getName() const {
 
 // Setter for player's name
 void Player::setName(const std::string& name) {
-    _name == name;
+    _name = name;
 }
 
 // Getter for player's score

@@ -1,4 +1,2 @@
 ﻿  Player.cpp
-C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\Player.cpp(12,11): warning C4834: discarding return value of function with [[nodiscard]] attribute
-C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\Player.cpp(24,11): warning C4834: discarding return value of function with [[nodiscard]] attribute
   ConsoleApplication1.vcxproj -> C:\Unisa\NewC++\Projects\C++_Assignment1\ConsoleApplication1\x64\Debug\ConsoleApplication1.exe
