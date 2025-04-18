@@ -55,8 +55,22 @@ void Game::startGame() {
     discardPile.clear();
 
     // Create and shuffle the deck
-    std::vector<Card*> deck = createDeck();
-    shuffleDeck(deck);
+    std::vector<Card*> newCards = createDeck();
+
+    // Clear the existing deck
+    while (!deck.empty()) {
+        deck.pop();
+    }
+
+    // Shuffle the new cards
+    std::shuffle(newCards.begin(), newCards.end(), std::mt19937{ std::random_device{}() });
+
+    // Transfer cards to the deck (stack)
+    for (auto it = newCards.rbegin(); it != newCards.rend(); ++it) {
+        deck.push(*it);
+    }
+
+    std::cout << "Deck initialized with " << deck.size() << " cards." << std::endl;
 
     std::cout << "\nGame started! " << players[0]->getName() << " vs " << players[1]->getName() << "\n" << std::endl;
 
