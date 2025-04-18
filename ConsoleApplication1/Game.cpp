@@ -196,24 +196,10 @@ void Game::takeTurn() {
 
         if (!drawnCard) {
             std::cout << "No more cards available!" << std::endl;
-            
             break;
         }
 
-        // Display the drawn card
-        std::cout << "Drew: ";
-        drawnCard->present();
-
-        // Check if player busts (has a card of the same suit in play area)
-        bool bust = false;
-        const CardCollection& playArea = currentPlayer.getPlayArea();
-
-        for (const Card* card : playArea) {
-            if (card->getType() == drawnCard->getType()) {
-                bust = true;
-                break;
-            }
-        }
+        bool bust = currentPlayer.playCard(drawnCard, *this);
 
         if (bust) {
             std::cout << "BUST! " << currentPlayer.getName() << " loses all cards in play area." << std::endl;
@@ -227,7 +213,8 @@ void Game::takeTurn() {
                 discardCard(card);
                 discardPile.push_back(card);
             }
-
+            // Clear the player's play area without deleting the cards (already in discard pile)
+            currentPlayer.clearPlayArea(false);
             // End the turn for this player
             break;
         }
