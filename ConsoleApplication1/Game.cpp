@@ -184,12 +184,7 @@ void Game::takeTurn() {
     std::cout << "\nRound " << round << " Turn " << currentTurn + 1 << std::endl;
 
     // Display player name and their Bank
-    std::cout << currentPlayer.getName() << std::endl;
-    std::cout << "Bank: ";
     currentPlayer.printBank();
-
-    //// Display player point from their Bank
-    displayCurrentPlayerScore();
 
     bool continueTurn = true;
 
@@ -206,7 +201,8 @@ void Game::takeTurn() {
 
         if (bust) {
             std::cout << "BUST! " << currentPlayer.getName() << " loses all cards in play area." << std::endl;
-
+            //// Display player point from their Bank
+            displayCurrentPlayerScore();
             // Discard the drawn card
             discardCard(drawnCard);
 
@@ -239,7 +235,14 @@ void Game::takeTurn() {
 
             // Check player's response
             if (input != "y") {
+                // End the turn
                 continueTurn = false;
+
+                // Bank the cards in the play area
+                bankCards(currentPlayer);
+                                
+            //// Display player point from their Bank
+            displayCurrentPlayerScore();
             }
         }
     }
@@ -328,9 +331,7 @@ void Game::displayCurrentPlayerScore() {
     Player& currentPlayer = getCurrentPlayer();
     int score = calculateFinalScore(currentPlayer);
 
-    std::cout << "\n=== Current Score ===\n";
-    std::cout << currentPlayer.getName() << "'s score: " << score << " points" << std::endl;
-    std::cout << "===================" << std::endl;
+    currentPlayer.printBank();
 }
 
 
