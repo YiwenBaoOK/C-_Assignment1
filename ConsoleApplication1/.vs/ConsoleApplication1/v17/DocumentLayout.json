@@ -3,48 +3,24 @@
   "WorkspaceRootPath": "C:\\Unisa\\NewC\u002B\u002B\\Projects\\C\u002B\u002B_Assignment1\\ConsoleApplication1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{68E0E994-B9DF-497A-A66B-E949ACFCE156}|ConsoleApplication1.vcxproj|C:\\Unisa\\NewC\u002B\u002B\\Projects\\C\u002B\u002B_Assignment1\\ConsoleApplication1\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{68E0E994-B9DF-497A-A66B-E949ACFCE156}|ConsoleApplication1.vcxproj|solutionrelative:Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{68E0E994-B9DF-497A-A66B-E949ACFCE156}|ConsoleApplication1.vcxproj|C:\\Unisa\\NewC\u002B\u002B\\Projects\\C\u002B\u002B_Assignment1\\ConsoleApplication1\\KrakenCard.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{68E0E994-B9DF-497A-A66B-E949ACFCE156}|ConsoleApplication1.vcxproj|solutionrelative:KrakenCard.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{68E0E994-B9DF-497A-A66B-E949ACFCE156}|ConsoleApplication1.vcxproj|C:\\Unisa\\NewC\u002B\u002B\\Projects\\C\u002B\u002B_Assignment1\\ConsoleApplication1\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{68E0E994-B9DF-497A-A66B-E949ACFCE156}|ConsoleApplication1.vcxproj|solutionrelative:Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{68E0E994-B9DF-497A-A66B-E949ACFCE156}|ConsoleApplication1.vcxproj|C:\\Unisa\\NewC\u002B\u002B\\Projects\\C\u002B\u002B_Assignment1\\ConsoleApplication1\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{68E0E994-B9DF-497A-A66B-E949ACFCE156}|ConsoleApplication1.vcxproj|solutionrelative:Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{68E0E994-B9DF-497A-A66B-E949ACFCE156}|ConsoleApplication1.vcxproj|C:\\Unisa\\NewC\u002B\u002B\\Projects\\C\u002B\u002B_Assignment1\\ConsoleApplication1\\ConsoleApplication1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{68E0E994-B9DF-497A-A66B-E949ACFCE156}|ConsoleApplication1.vcxproj|solutionrelative:ConsoleApplication1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68E0E994-B9DF-497A-A66B-E949ACFCE156}|ConsoleApplication1.vcxproj|C:\\Unisa\\NewC\u002B\u002B\\Projects\\C\u002B\u002B_Assignment1\\ConsoleApplication1\\KrakenCard.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{68E0E994-B9DF-497A-A66B-E949ACFCE156}|ConsoleApplication1.vcxproj|solutionrelative:KrakenCard.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{68E0E994-B9DF-497A-A66B-E949ACFCE156}|ConsoleApplication1.vcxproj|C:\\Unisa\\NewC\u002B\u002B\\Projects\\C\u002B\u002B_Assignment1\\ConsoleApplication1\\Card.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{68E0E994-B9DF-497A-A66B-E949ACFCE156}|ConsoleApplication1.vcxproj|solutionrelative:Card.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{68E0E994-B9DF-497A-A66B-E949ACFCE156}|ConsoleApplication1.vcxproj|C:\\Unisa\\NewC\u002B\u002B\\Projects\\C\u002B\u002B_Assignment1\\ConsoleApplication1\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{68E0E994-B9DF-497A-A66B-E949ACFCE156}|ConsoleApplication1.vcxproj|solutionrelative:Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68E0E994-B9DF-497A-A66B-E949ACFCE156}|ConsoleApplication1.vcxproj|C:\\Unisa\\NewC\u002B\u002B\\Projects\\C\u002B\u002B_Assignment1\\ConsoleApplication1\\MermaidCard.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{68E0E994-B9DF-497A-A66B-E949ACFCE156}|ConsoleApplication1.vcxproj|solutionrelative:MermaidCard.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{68E0E994-B9DF-497A-A66B-E949ACFCE156}|ConsoleApplication1.vcxproj|C:\\Unisa\\NewC\u002B\u002B\\Projects\\C\u002B\u002B_Assignment1\\ConsoleApplication1\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{68E0E994-B9DF-497A-A66B-E949ACFCE156}|ConsoleApplication1.vcxproj|solutionrelative:Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68E0E994-B9DF-497A-A66B-E949ACFCE156}|ConsoleApplication1.vcxproj|C:\\Unisa\\NewC\u002B\u002B\\Projects\\C\u002B\u002B_Assignment1\\ConsoleApplication1\\MermaidCard.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{68E0E994-B9DF-497A-A66B-E949ACFCE156}|ConsoleApplication1.vcxproj|solutionrelative:MermaidCard.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{68E0E994-B9DF-497A-A66B-E949ACFCE156}|ConsoleApplication1.vcxproj|C:\\Unisa\\NewC\u002B\u002B\\Projects\\C\u002B\u002B_Assignment1\\ConsoleApplication1\\Card.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{68E0E994-B9DF-497A-A66B-E949ACFCE156}|ConsoleApplication1.vcxproj|solutionrelative:Card.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{68E0E994-B9DF-497A-A66B-E949ACFCE156}|ConsoleApplication1.vcxproj|C:\\Unisa\\NewC\u002B\u002B\\Projects\\C\u002B\u002B_Assignment1\\ConsoleApplication1\\Card.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{68E0E994-B9DF-497A-A66B-E949ACFCE156}|ConsoleApplication1.vcxproj|solutionrelative:Card.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{68E0E994-B9DF-497A-A66B-E949ACFCE156}|ConsoleApplication1.vcxproj|C:\\Unisa\\NewC\u002B\u002B\\Projects\\C\u002B\u002B_Assignment1\\ConsoleApplication1\\KrakenCard.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{68E0E994-B9DF-497A-A66B-E949ACFCE156}|ConsoleApplication1.vcxproj|solutionrelative:KrakenCard.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,44 +30,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "ConsoleApplication1.cpp",
               "DocumentMoniker": "C:\\Unisa\\NewC\u002B\u002B\\Projects\\C\u002B\u002B_Assignment1\\ConsoleApplication1\\ConsoleApplication1.cpp",
               "RelativeDocumentMoniker": "ConsoleApplication1.cpp",
               "ToolTip": "C:\\Unisa\\NewC\u002B\u002B\\Projects\\C\u002B\u002B_Assignment1\\ConsoleApplication1\\ConsoleApplication1.cpp",
               "RelativeToolTip": "ConsoleApplication1.cpp",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-17T12:10:53.127Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "KrakenCard.cpp",
-              "DocumentMoniker": "C:\\Unisa\\NewC\u002B\u002B\\Projects\\C\u002B\u002B_Assignment1\\ConsoleApplication1\\KrakenCard.cpp",
-              "RelativeDocumentMoniker": "KrakenCard.cpp",
-              "ToolTip": "C:\\Unisa\\NewC\u002B\u002B\\Projects\\C\u002B\u002B_Assignment1\\ConsoleApplication1\\KrakenCard.cpp",
-              "RelativeToolTip": "KrakenCard.cpp",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB4AAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-18T03:08:36.819Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Game.cpp",
-              "DocumentMoniker": "C:\\Unisa\\NewC\u002B\u002B\\Projects\\C\u002B\u002B_Assignment1\\ConsoleApplication1\\Game.cpp",
-              "RelativeDocumentMoniker": "Game.cpp",
-              "ToolTip": "C:\\Unisa\\NewC\u002B\u002B\\Projects\\C\u002B\u002B_Assignment1\\ConsoleApplication1\\Game.cpp",
-              "RelativeToolTip": "Game.cpp",
-              "ViewState": "AgIAABoBAAAAAAAAAAAAAPQAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-17T10:36:44.761Z",
+              "WhenOpened": "2025-04-17T12:10:53.127Z",
               "EditorCaption": ""
             },
             {
@@ -104,24 +55,12 @@
               "RelativeToolTip": "Game.h",
               "ViewState": "AgIAADMAAAAAAAAAAAAAAEMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-17T10:36:58.971Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Player.cpp",
-              "DocumentMoniker": "C:\\Unisa\\NewC\u002B\u002B\\Projects\\C\u002B\u002B_Assignment1\\ConsoleApplication1\\Player.cpp",
-              "RelativeDocumentMoniker": "Player.cpp",
-              "ToolTip": "C:\\Unisa\\NewC\u002B\u002B\\Projects\\C\u002B\u002B_Assignment1\\ConsoleApplication1\\Player.cpp",
-              "RelativeToolTip": "Player.cpp",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAADsAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-17T10:24:12.554Z",
+              "WhenOpened": "2025-04-17T10:36:58.971Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "KrakenCard.h",
               "DocumentMoniker": "C:\\Unisa\\NewC\u002B\u002B\\Projects\\C\u002B\u002B_Assignment1\\ConsoleApplication1\\KrakenCard.h",
               "RelativeDocumentMoniker": "KrakenCard.h",
@@ -133,7 +72,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "Player.h",
               "DocumentMoniker": "C:\\Unisa\\NewC\u002B\u002B\\Projects\\C\u002B\u002B_Assignment1\\ConsoleApplication1\\Player.h",
               "RelativeDocumentMoniker": "Player.h",
@@ -141,55 +80,21 @@
               "RelativeToolTip": "Player.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-17T06:24:55.525Z"
+              "WhenOpened": "2025-04-17T06:24:55.525Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MermaidCard.cpp",
-              "DocumentMoniker": "C:\\Unisa\\NewC\u002B\u002B\\Projects\\C\u002B\u002B_Assignment1\\ConsoleApplication1\\MermaidCard.cpp",
-              "RelativeDocumentMoniker": "MermaidCard.cpp",
-              "ToolTip": "C:\\Unisa\\NewC\u002B\u002B\\Projects\\C\u002B\u002B_Assignment1\\ConsoleApplication1\\MermaidCard.cpp",
-              "RelativeToolTip": "MermaidCard.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-17T12:38:33.592Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MermaidCard.h",
-              "DocumentMoniker": "C:\\Unisa\\NewC\u002B\u002B\\Projects\\C\u002B\u002B_Assignment1\\ConsoleApplication1\\MermaidCard.h",
-              "RelativeDocumentMoniker": "MermaidCard.h",
-              "ToolTip": "C:\\Unisa\\NewC\u002B\u002B\\Projects\\C\u002B\u002B_Assignment1\\ConsoleApplication1\\MermaidCard.h",
-              "RelativeToolTip": "MermaidCard.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-17T12:38:36.307Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Card.cpp",
-              "DocumentMoniker": "C:\\Unisa\\NewC\u002B\u002B\\Projects\\C\u002B\u002B_Assignment1\\ConsoleApplication1\\Card.cpp",
-              "RelativeDocumentMoniker": "Card.cpp",
-              "ToolTip": "C:\\Unisa\\NewC\u002B\u002B\\Projects\\C\u002B\u002B_Assignment1\\ConsoleApplication1\\Card.cpp",
-              "RelativeToolTip": "Card.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-17T06:37:28.733Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 1,
               "Title": "Card.h",
               "DocumentMoniker": "C:\\Unisa\\NewC\u002B\u002B\\Projects\\C\u002B\u002B_Assignment1\\ConsoleApplication1\\Card.h",
               "RelativeDocumentMoniker": "Card.h",
               "ToolTip": "C:\\Unisa\\NewC\u002B\u002B\\Projects\\C\u002B\u002B_Assignment1\\ConsoleApplication1\\Card.h",
               "RelativeToolTip": "Card.h",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAABwAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-17T06:37:06.409Z"
+              "WhenOpened": "2025-04-17T06:37:06.409Z",
+              "EditorCaption": ""
             }
           ]
         }
